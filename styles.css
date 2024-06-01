@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background-color: #333;
+    text-align: center;
+}
+
+.profile {
+    padding: 50px 0;
+}
+
+.profile img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+.profile h1, .profile h2 {
+    margin: 10px 0;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.social-icons a:hover {
+    color: #00aced;
+}
+
+.portfolio {
+    padding: 50px 0;
+}
+
+.portfolio h2 {
+    margin-bottom: 20px;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.portfolio-card {
+    background-color: #444;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.portfolio-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.portfolio-card.center-card {
+    grid-column: span 1;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.about-me {
+    padding: 50px 0;
+}
+
+.about-me h2 {
+    margin-bottom: 20px;
+}
+
+.about-me p {
+    margin: 0 auto;
+    width: 60%;
+}
