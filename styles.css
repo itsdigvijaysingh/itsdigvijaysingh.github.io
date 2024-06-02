@@ -3,52 +3,77 @@ body {
     color: #fff;
     background-color: #333;
     text-align: center;
+    overflow-x: hidden;
 }
 
 .profile {
     padding: 50px 0;
+    animation: fadeIn 2s;
 }
 
 .profile img {
     border-radius: 50%;
     width: 150px;
     height: 150px;
+  
 }
 
 .profile h1, .profile h2 {
-    margin: 10px 0;
-}
-
-.social-icons a {
-    margin: 0 10px;
-    color: #fff;
-    text-decoration: none;
-    font-size: 24px;
-}
-
-.social-icons a:hover {
-    color: #00aced;
+    margin: 8px 0;
+    animation: fadeIn 2s;
 }
 
 .portfolio {
-    padding: 50px 0;
+    padding: 1px 0;
+    animation: slideInUp 2s;
 }
 
 .portfolio h2 {
     margin-bottom: 20px;
+    animation: fadeIn 2s;
 }
 
 .portfolio-grid {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    animation: fadeIn 2s;
 }
 
 .portfolio-card {
     background-color: #444;
-    padding: 20px;
+    padding: 18px;
     border-radius: 10px;
     transition: transform 0.3s, box-shadow 0.3s;
+    animation: zoomIn 2s;
+}
+
+.portfolio-card img {
+    width: 60%;
+    height: auto;
+    border-radius: 15px;
+    animation: zoomIn 2s;
+}
+
+.portfolio-card h3 {
+    margin: 5px 0 5px;
+    animation: fadeIn 2s;
+}
+
+.portfolio-card p {
+    margin: 0 0 5px;
+    animation: fadeIn 2s;
+}
+
+.portfolio-card a {
+    color: #00aced;
+    text-decoration: none;
+    transition: color 0.3s;
+    animation: fadeIn 2s;
+}
+
+.portfolio-card a:hover {
+    color: #fff;
 }
 
 .portfolio-card:hover {
@@ -56,25 +81,64 @@ body {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
-.portfolio-card.center-card {
-    grid-column: span 1;
-}
-
-.portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+.portfolio-card:nth-child(1),
+.portfolio-card:nth-child(3) {
+    visibility: hidden;
 }
 
 .about-me {
-    padding: 50px 0;
+    padding: 20px 0;
+    animation: slideInUp 2s;
 }
 
 .about-me h2 {
     margin-bottom: 20px;
+    animation: fadeIn 2s;
 }
 
 .about-me p {
     margin: 0 auto;
     width: 60%;
+    animation: fadeIn 2s;
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes rotateIn {
+    from {
+        transform: rotate(-360deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
